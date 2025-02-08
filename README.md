@@ -1,3 +1,6 @@
+**E-Commerce Nextjs Design Jam 2024 Template - Hackathon Project**
+I could only complete tasks from Day 1 to Day 3 because I had my final university exams. I am a third-year IT student, and due to this commitment, I couldn't complete the entire project on time. Since today is the last submission date, I have submitted what I could, but I am still working on the remaining tasks. I kindly request you to accept my submission, considering my situation.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

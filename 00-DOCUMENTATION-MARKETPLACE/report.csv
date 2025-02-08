@@ -1,0 +1,2 @@
+Test Case ID,Feature,Test Scenario,Test Steps,Expected Result,Actual Result,Status (Pass/Fail),Remarks
+TC001,API Data Fetch,Fetch data from API and store in Sanity,1. Send request to API,,,,

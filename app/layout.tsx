@@ -30,11 +30,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <NextTopLoader />
+         <NextTopLoader></NextTopLoader>
           <Toptag></Toptag>
           <Header></Header>
         {children}
-        <Footer></Footer>
+       <Footer></Footer>
       </body>
     </html>
   );

@@ -81,7 +81,11 @@ export default function Also_like_product(){
                                     </div>
                                     <p className="md:text-[20px] text-[18px] font-bold mt-1 flex items-center gap-3">{data.price} 
                                         <span className="text-black/40 line-through">{data.old_price}</span>
-                                        <span className="text-[12px] py-[6px] px-[14px] rounded-[62px] bg-[#FF3333]/10 text-[#FF3333]">{data.price_percentage}</span>
+                                        {data.price_percentage && (
+  <span className="text-[12px] py-[6px] px-[14px] rounded-[62px] bg-[#FF3333]/10 text-[#FF3333]">
+    {data.price_percentage}
+  </span>
+)}
                                         </p>
                                     </div>
                                     

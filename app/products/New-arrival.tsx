@@ -1,8 +1,10 @@
+
 import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { client } from "@/sanity/lib/client";
 
 
 interface Iproduct {
@@ -50,6 +52,29 @@ const product: Iproduct[] = [
   },
 ];
 
+const fetchData = async () => {
+  try {
+    const productData = await client.fetch(`*[_type == "products"]{
+      _id,
+      name,
+      description,
+      price,
+      sizes,
+      colors,
+      image,
+      discountPercent,
+      isNew
+    }`);
+    
+    console.log("Product data: ", productData);
+  } catch (error) {
+    console.error("Error fetching product data:", error);
+  }
+};
+
+fetchData();
+
+
 export default function New_arrival() {
   return (
     <>
@@ -92,9 +117,11 @@ export default function New_arrival() {
                     <span className="text-black/40 line-through">
                       {data.old_price}
                     </span>
-                    <span className="text-[12px] py-[6px] px-[14px] rounded-[62px] bg-[#FF3333]/10 text-[#FF3333]">
-                      {data.price_percentage}
-                    </span>
+                    {data.price_percentage && (
+  <span className="text-[12px] py-[6px] px-[14px] rounded-[62px] bg-[#FF3333]/10 text-[#FF3333]">
+    {data.price_percentage}
+  </span>
+)}
                   </p>
                 </div>
               </div>
